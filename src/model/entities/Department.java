@@ -1,7 +1,6 @@
 package model.entities;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Objects;
 
 public class Department implements Serializable {
@@ -11,7 +10,6 @@ public class Department implements Serializable {
 	private Integer id;
 	private String name;
 	
-	private List<Seller> sellers;
 	
 	public Department() {}
 	
@@ -41,11 +39,6 @@ public class Department implements Serializable {
 	}
 
 
-	public List<Seller> getSellers() {
-		return sellers;
-	}
-
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -65,7 +58,7 @@ public class Department implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Department [id=" + id + ", name=" + name + ", sellers=" + sellers + "]";
+		return "Department [id=" + id + ", name=" + name + "]";
 	}
 
 }
